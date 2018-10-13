@@ -12,7 +12,7 @@ class Circle {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, 360)
         ctx.closePath();
-        ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+        ctx.fillStyle = 'rgba(104, 204, 204, 0.3)';
         ctx.fill();
     }
     drawLine(ctx, _circle) 
@@ -37,7 +37,6 @@ class Circle {
         this.y += this._my / 2;
     }
 }
-//鼠标点画圆闪烁变动
 class currentCirle extends Circle {
     constructor(x, y) 
     {
@@ -45,10 +44,10 @@ class currentCirle extends Circle {
     }
     drawCircle(ctx) {
         ctx.beginPath();
-        this.r = 8;
+        this.r = 4;
         ctx.arc(this.x, this.y, this.r, 0, 360);
         ctx.closePath();
-        ctx.fillStyle = 'rgba(255, 77, 54, 0.6)'
+        ctx.fillStyle = 'rgba(255, 122, 154, 0.6)'
         ctx.fill();
     }
 }
@@ -93,3 +92,5 @@ window.onmouseout = function () {
     current_circle.y = null;
 
 };
+
+
